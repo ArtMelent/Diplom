@@ -1,0 +1,13 @@
+1.https://www.djangoproject.com/download/
+pip install Django==4.1.2
+
+2. pip install virtualenv
+3. cd anekdoty-backend\Scripts\activate  (deactivate)
+
+
+----------------------------
+pip install virtualenv
+python -m virtualenv anekdoty
+.\anekdoty\Scripts\activate
+pip install "Django==3.0.*"
+django-admin startproject name

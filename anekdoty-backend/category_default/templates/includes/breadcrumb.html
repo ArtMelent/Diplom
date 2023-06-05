@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load static %}
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/{{ languages.url }}/" itemprop="item"><span itemprop="name">{% trans 'Home' %}</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    {% for breadcrumb in breadcrumbs %}
+      <li class="breadcrumb-item{% if forloop.last %} active{% endif %}"{% if not forloop.last %} itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"{% endif %}>
+        {% if not forloop.last %}
+          <a href="{{ breadcrumb.1 }}" itemprop="item"><span itemprop="name">{{ breadcrumb.0 }}</span></a>
+          <meta itemprop="position" content="{{ forloop.counter0 + 2 }}" />
+        {% else %}
+          <span itemprop="name">{{ breadcrumb.0 }}</span>
+          <meta itemprop="position" content="{{ forloop.counter0 + 2 }}" />
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+  </nav>
+  
+  {% if schema %}
+    <script type="application/ld+json">
+      {{ schema|safe }}
+    </script>
+  {% endif %}
+  

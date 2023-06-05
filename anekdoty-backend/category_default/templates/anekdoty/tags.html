@@ -1,0 +1,47 @@
+{% block title %}{% if tag %}{{ tag.name }}{% elif subtag %}{{ subtag.name }}{% endif %} - Anekdots{% endblock %}
+
+{% block content %}
+  <div class="container my-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        {% comment %} <li class="breadcrumb-item"><a href="{% url 'category_default:language_set' language_url %}">Home</a></li> {% endcomment %}
+        {% comment %} <li class="breadcrumb-item"><a href="{% url 'category_default:language' language_url %}">{{ language.name }}</a></li> {% endcomment %}
+        {% comment %} <li class="breadcrumb-item"><a href="{% url 'category_default:category' language_url category_url %}">{{ category.name }}</a></li> {% endcomment %}
+        {% if subcategory %}
+        {% comment %} <li class="breadcrumb-item"><a href="{% url 'category_default:subcategory' language_url category_url subcategory_url %}">{{ subcategory.name }}</a></li> {% endcomment %}
+        {% endif %}
+        {% if tag %}
+        <li class="breadcrumb-item active" aria-current="page">{{ tag.name }}</li>
+        {% elif subtag %}
+        <li class="breadcrumb-item active" aria-current="page">{{ subtag.name }}</li>
+        {% endif %}
+      </ol>
+    </nav>
+
+    <h1 class="mb-4">{% if tag %}{{ tag.name }}{% elif subtag %}{{ subtag.name }}{% endif %}</h1>
+
+    {% load auto_link %}
+
+    {% if records %}
+      <div class="row">
+        {% for record in records %}
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{ record.h2 }}</h5>
+             
+              <p class="card-text">{{ record.text|auto_link_subcategory:tag|safe}}</p>
+           
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Tags: {{ record.tags.all|join:", " }}</small>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No records found.</p>
+    {% endif %}
+  </div>
+{% endblock %}

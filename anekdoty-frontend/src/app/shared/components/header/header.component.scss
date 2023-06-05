@@ -1,0 +1,27 @@
+
+.mat-toolbar{
+    // border-bottom: 2px solid rgb(222, 222, 222);
+    height: 15vh;
+    background-color: #fff !important;
+    padding: 0;
+    margin-bottom: 2rem;
+    .slogan{
+        justify-content: right;
+        text-align: right;
+        border-bottom: 4px solid rgb(226, 223, 192);
+        padding-bottom: 2rem;
+        padding-right: 3rem;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    
+    .logo{
+        width: 420px;
+        height: auto;
+    
+        img{
+            width: 380px;
+            height: auto;
+        }
+    }       
+}

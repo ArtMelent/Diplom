@@ -1,0 +1,65 @@
+.sidebar {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 90%;
+      
+      li.category {
+        margin-bottom: 10px;
+        
+        padding: 10px 20px 10px 20px;
+        display: block;
+        border-radius: 14px;
+        min-height: 200px;
+        
+        
+        h2.category-title {
+          margin: 0;
+          font-size: 1.55rem;
+        //   font-weight: bold;
+          text-align: center;
+        }
+        
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 10px 0;
+          
+          li.sub_category {
+            // padding: 5px;
+            margin-bottom: 10px;
+            font-size: 1.35em;
+            
+            a.sub_category-link {
+              color: #000;
+              text-decoration: none;
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        
+        // Assign background colors to li.category elements
+        &:nth-child(1) {
+          background-color: #ffe8dd;
+          color: #c92f00;
+        }
+        
+        &:nth-child(2) {
+          background-color: #dbeedb;
+          color: #1e6632;
+        }
+        
+        &:nth-child(3) {
+          background-color: #fbdff5;
+          color: #87577e;
+        }
+        
+        // Add more nth-child styles as needed for additional categories
+      }
+    }
+  }
+  

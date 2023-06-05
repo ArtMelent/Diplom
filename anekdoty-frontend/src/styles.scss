@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    width: 90%!important;
+    margin: 0 auto!important;
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Adjust the height as needed */
+      }
+      
+      .content-container {
+        display: flex;
+        flex: 1;
+      }
+      
+      app-test-slidebar {
+        width: 18%; 
+  
+      }
+      
+      .router-outlet-container {
+        flex: 1;
+      }
+      
+
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

@@ -1,0 +1,58 @@
+{% load i18n %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="seo_description" content="{{tags.seo_description}}" placeholder="seo description">
+    <meta name="seo_keywords" content="{{tags.seo_keywords}}" placeholder="seo keywords">
+{#    <meta name="seo_h1" content="{{tags.seo_h1}}" placeholde="seo h1">#}
+        <link rel="stylesheet" href="{% static  'css/breadcrumb.scss' %}">
+    <title>{{ tags.seo_title }}</title>
+
+</head>
+<body>
+<h1>Tag:</h1>
+    <div class="card">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item "><a class="breadcrumbs__link" itemprop="item" href="/{{languages.url}}/">{% trans 'Home' %}</a></li>
+          {% for name, url in breadcrumbs %}
+            {% if url %}
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="{{ url }}">{{ name }}</a></li>
+            {% else %}
+              <li class="breadcrumbs__item breadcrumbs__link breadcrumbs__link--current" aria-current="page">{{ name }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+        <h1>{{ current_tag.language_id }}</h1>
+        <h1>{{ current_tag.name }}</h1>
+        <p>{{ current_tag.description | safe }}</p>
+        1
+        <p>{{ parent_tag.description }}</p>
+        {{parent_tag_name}}
+        2
+        <p>{{ current_tag.image_url }}</p>
+    </div>
+<h1>Records:</h1>
+
+{% load auto_link %}
+
+{% for records in anekdots %}
+<div class="records">
+        <h2>{{ records.h2 }}</h2>
+        {{ records.text|default:''|auto_link:current_tag|safe }}
+      
+
+        <p>{{ records.rating }}</p>
+</div>
+{% endfor %}
+   <h1>{% trans 'My name is Artem' %}</h1>
+    <p>{% trans 'Description about me' %}</p>
+
+</body>
+</html>

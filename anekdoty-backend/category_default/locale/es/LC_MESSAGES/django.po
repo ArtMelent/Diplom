@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-08 19:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\anekdoty\templates\anekdoty\anekdot_tag.html:20
+msgid "My name is Artem"
+msgstr "My name is Artem SPANISH"
+
+#: .\anekdoty\templates\anekdoty\anekdot_tag.html:21
+msgid "Description about me"
+msgstr "Spanish desctiption about me"
+
+#: .\anekdoty\templates\anekdoty\language_test.html:20
+msgid "My name is Artem languages"
+msgstr "Hola my name is Artem SPANISH"
+
+#: .\anekdoty\templates\anekdoty\language_test.html:21
+msgid "Description about me languages"
+msgstr "Spanish desctiption about me"
+
+#: .\anekdoty\views.py:11
+msgid "Check Translation"
+msgstr "Check SPANISH"
+
+#: .\tag\tag\settings.py:149
+msgid "English"
+msgstr ""
+
+#: .\tag\tag\settings.py:150
+msgid "Ukrainian"
+msgstr ""
+
+#: .\tag\tag\settings.py:151
+msgid "Spanish"
+msgstr ""
+
+#: .\tag\tag\settings.py:152
+msgid "French"
+msgstr ""
+
+#: .\tag\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: .\tag\templates\admin\base_site.html:6
+msgid "Django administration"
+msgstr ""

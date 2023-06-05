@@ -1,0 +1,55 @@
+.records-wrapper{
+    width: 50%;
+    text-decoration: none;
+    list-style: none;
+    li{
+        text-decoration: none;
+        list-style: none;
+        p{
+        width: 95%;
+        margin-left: auto;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        }
+    }
+}
+
+.commontags-wrapper{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+
+    .commontags-list:hover{
+        background-color: rgb(244, 54, 54)!important;
+        color: white!important;
+        
+    }
+    .commontags-list{
+        text-decoration: none;
+        margin-left: 10px;
+        padding: 10px 15px;
+        // border: 1px solid black;
+        border-radius: 20px;
+        font-size: 1.1rem;
+        
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        &:nth-child(1) {
+            background-color: #ffe8dd;
+            color: #c92f00;
+          }
+          
+          &:nth-child(2) {
+            background-color: #dbeedb;
+            color: #1e6632;
+          }
+          
+          &:nth-child(3) {
+            background-color: #fbdff5;
+            color: #87577e;
+          }
+    
+    }
+}

@@ -1,0 +1,12 @@
+<div *ngFor="let data of languageData">
+    <h4>Categories:</h4>
+    <ul>
+      <li *ngFor="let category of data.categories">{{ category.name }}</li>
+    </ul>
+
+    <h4>Tags:</h4>
+    <ul>
+      <li *ngFor="let tag of data.tags">{{ tag.name }}</li>
+    </ul>
+  </div>
+Why u don't work?

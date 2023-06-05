@@ -1,0 +1,26 @@
+.breadcrumbs {
+	 display: block;
+	 font-size: 1em;
+}
+ .breadcrumbs__list {
+	 margin: 0;
+	 padding: 0;
+	 display: flex;
+	 flex-wrap: wrap;
+	 list-style: none;
+}
+ .breadcrumbs__item {
+	 display: flex;
+}
+ .breadcrumbs__item:not(:last-of-type):after {
+	 content: ' → ';
+}
+ .breadcrumbs__link {
+	 display: block;
+	 color: black;
+	 text-decoration: none;
+	 margin: 0 5px;
+}
+ .breadcrumbs__link--current {
+	 color: #777777;
+}

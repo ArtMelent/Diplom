@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <ul class="wrapper">
+    <ng-container *ngFor="let category of categories">
+      <ng-container *ngIf="!category.behave_as_tag">
+        <li class="category">
+          <h2 class="category-title">{{ category.name }}</h2>
+          <ul>
+            <li class="sub_category" *ngFor="let subCategory of category.sub_categories">
+              <a class="sub_category-link" [routerLink]="['/', language?.url, category.url, subCategory.url]">{{ subCategory.name }}</a>
+            </li>
+          </ul>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="category.behave_as_tag">
+        <!-- Skip displaying sub-categories and exclude the category -->
+      </ng-container>
+    </ng-container>
+  </ul>
+</div>

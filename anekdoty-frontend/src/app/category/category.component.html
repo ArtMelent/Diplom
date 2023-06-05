@@ -1,0 +1,23 @@
+<div *ngIf="categoryData" class="category-container">
+  <h1 class="h1-title">{{ categoryData.category.name }}</h1>
+
+  <img [src]="'http://127.0.0.1:8000' + categoryData.category.image_url" alt="Category Image" class="category-image" />
+
+  <div class="category-description">
+    <p [innerHTML]="categoryData.category.description"></p>
+  </div>
+  
+  
+  
+  <!-- <h2>Subcategory:</h2>
+
+  <ul>
+    <li *ngFor="let subcategory of categoryData.category.sub_categories" class="subcategory-item">
+      <h3>{{ subcategory.name }}</h3>
+      <h2>Common Tags:</h2>
+        <ul>
+          <li *ngFor="let tag of categoryData.common_tags">{{ tag.name }}</li>
+        </ul>
+    </li>
+  </ul> -->
+</div>

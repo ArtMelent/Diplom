@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load static %}
+<html lang="{{languages.code}}">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<p>Languages name: {{ languages.name }}</p>
+	<form name="dealselect">
+		<label for="language">Choose a language:</label>
+				<select id="language" value="GO" onchange="location = this.value;">
+				{% for lang in lang %}
+				{% comment %} <option {% if lang.url == languages.url %}selected{% endif %} value="{% url 'categoty_default:language_set' lang.url %}">{{lang.name}}</option> {% endcomment %}
+				{% endfor %}
+		</select>
+	</form>
+	
+	
+	<div class="card">{% for tag in tags %}
+		<ul>
+		</ul>
+	{% endfor %}</div>
+	
+	{% if records %}
+    <h3>Records:</h3>
+		{% load auto_link %}
+	
+    <ul>
+		{% for tag in tags %}
+      		{% for record in records %}
+	  			<p>{{record.text |auto_link_subcategory:tag|safe}}</p>
+	  		{% endfor %}
+       {% endfor %}
+       
+    </ul>
+  {% else %}
+    <p>No records found.</p>
+  {% endif %}
+  
+	<h1>{% trans 'My name is Artem languages' %}</h1>
+    <p>{% trans 'Description about me languages' %}</p>
+</body>
+</html>
